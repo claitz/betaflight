@@ -937,7 +937,7 @@ static void osdElementDebug(osdElementParms_t *element)
 static void osdElementDisarmed(osdElementParms_t *element)
 {
     if (!ARMING_FLAG(ARMED)) {
-        tfp_sprintf(element->buff, "DISARMED");
+        tfp_sprintf(element->buff, "CHILLIN'");
     }
 }
 

@@ -64,7 +64,7 @@
 #include "sensors/battery.h"
 #include "sensors/sensors.h"
 
-const char CRASH_FLIP_WARNING[] = "> CRASH FLIP <";
+const char CRASH_FLIP_WARNING[] = "BRO HALP!";
 
 void renderOsdWarning(char *warningText, bool *blinking, uint8_t *displayAttr)
 {
@@ -207,7 +207,7 @@ void renderOsdWarning(char *warningText, bool *blinking, uint8_t *displayAttr)
 #endif // USE_RX_LINK_QUALITY_INFO
 
     if (osdWarnGetState(OSD_WARNING_BATTERY_CRITICAL) && batteryState == BATTERY_CRITICAL) {
-        tfp_sprintf(warningText, " LAND NOW");
+        tfp_sprintf(warningText, "DED");
         *displayAttr = DISPLAYPORT_SEVERITY_CRITICAL;
         *blinking = true;
         return;
@@ -378,7 +378,7 @@ void renderOsdWarning(char *warningText, bool *blinking, uint8_t *displayAttr)
 #endif
 
     if (osdWarnGetState(OSD_WARNING_BATTERY_WARNING) && batteryState == BATTERY_WARNING) {
-        tfp_sprintf(warningText, "LOW BATTERY");
+        tfp_sprintf(warningText, "LOOOOW");
         *displayAttr = DISPLAYPORT_SEVERITY_WARNING;
         *blinking = true;
         return;
